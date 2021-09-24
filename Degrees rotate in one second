@@ -1,0 +1,12 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int revolutions = 3000;
+	    int degrees = 360;
+	    int sec = 60;
+	    
+	    int seconds = revolutions * degrees / sec;
+		System.out.println(seconds + " degrees it rotate in one seconds");
+	}
+}
