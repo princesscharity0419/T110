@@ -1,0 +1,53 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner scan = new Scanner(System.in);
+		System.out.print("Input Employee #1 Name: ");
+		char name1 = scan.next().charAt(0);
+		System.out.print("Input Employee #1 ID#: ");
+		int id1 = scan.nextInt();
+		System.out.print("Input Employee #1 Salary: ");
+		int sal1 = scan.nextInt();
+		
+		System.out.print("Input Employee #2 Name: ");
+		char name2 = scan.next().charAt(0);
+		System.out.print("Input Employee #2 ID#: ");
+		int id2 = scan.nextInt();
+		System.out.print("Input Employee #2 Salary: ");
+		int sal2 = scan.nextInt();
+		
+		double newsal1 = sal1 * 0.10;
+		double netsal1 = sal1 - newsal1;
+		double newsal2 = sal2 * 0.10;
+		double netsal2 = sal2 - newsal2;
+	}
+	public static class Object
+	{
+	    Employee EmpObj1 = new Employee(name1, id1, netsal1);
+	    Employee EmpObj2 = new Employee(name2, id2, netsal2);
+	    
+	    System.out.println("Name: " + EmpObj1.name1 + "; ID#: " + EmpObj1.id1 + "; Salary: P" + EmpObj1.netsal1);
+	    System.out.println("Name: " + EmpObj2.name2 + "; ID#: " + EmpObj2.id2 + "; Salary: P" + EmpObj2.netsal2);
+	}
+	public static class Employee
+	{
+	    public String name1;
+	    public String name2;
+	    public int id1;
+	    public int id2;
+	    public int netsal1;
+	    public int netsal2;
+	    
+	        Employee(String name1, String name2, int id1, int id2, int netsal1, int netsal2)
+	        {
+	            this.name1 = name1;
+	            this.name2 = name2;
+	            this.id1 = id1;
+	            this.id2 = id2;
+	            this.netsal1 = netsal1;
+	            this.netsal2 = netsal2;
+	        }
+	}
+}
